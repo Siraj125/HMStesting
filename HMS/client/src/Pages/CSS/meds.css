@@ -1,0 +1,109 @@
+html,body {
+  margin: 0;
+}
+
+.PmsApp {
+    text-align: center;
+    /* font-size: 12px; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* background-image: url("/Users/siraj/Documents/ITP21/client/src/images/med.jpg"); */
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.PmsApp docsDisplay {
+  justify-content: center;
+}
+
+.PmsApp table{
+  align-items: center;
+  width:100% ;
+  border: solid 2px;
+  border-collapse: collapse;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  
+}
+.PmsApp table th {
+  font-size: 20px;
+  border:solid 1px;
+  border-color: black;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #3b79b3;
+  color: white;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
+.PmsApp table td {
+  background-color: aliceblue;
+  font-size: 18px;
+  border:solid 1px;
+  text-align: center ;
+}
+
+.PmsApp table button {
+      font-size: 15px;
+      width: 60px;
+      height: 30px;
+      background-color:rgb(142, 202, 255);
+      margin: 5px;
+  }
+
+  .PmsApp table button:hover {
+    background-color: #3b79b3;
+  }
+
+  .inputs {
+    background-color: aliceblue;
+    background-position: center;
+    background-size: cover;
+    padding: 60px;
+    margin-top: 50px;
+    border:solid 2px;
+  border-color: black;
+  }
+
+  .inputs input{
+    margin: 10px;
+    font-size: 15px;
+    width: 150px;
+    height: 20px;
+    border: solid;
+  }
+
+  .inputs button {
+    font-size: 15px;
+    width: 150px;
+    height: 30px;
+    margin-left: 20px;
+    background-color:rgb(142, 202, 255);
+}
+.inputs button:hover {
+  background-color: #3b79b3;
+}
+
+.inputs span{
+  font-size: 20px;
+}
+
+.error-msg {
+  color: red;
+}
+
+/* .sesh {
+  box-sizing: border-box;
+  background-color: rgb(255, 118, 118);
+  display: flex;
+  justify-content: right;
+} */

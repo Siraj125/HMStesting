@@ -1,0 +1,14 @@
+.sesh {
+    box-sizing: border-box;
+    background-color: rgb(255, 118, 118);
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+}
+.sesh button {
+    color: red;
+}
+
+.sesh span{
+    margin-right: 20px;
+}
