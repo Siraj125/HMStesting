@@ -1,8 +1,8 @@
 [build]
-    functions=""
+    functions="functions"
 
 [[redirects]]
-    to="/.netlify/functions/index/getPharma"
+    to="/.netlify/functions/api:splat"
     from="/*"
     status=200 
     
