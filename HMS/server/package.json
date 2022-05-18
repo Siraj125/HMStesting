@@ -19,6 +19,7 @@
     "nodemon": "^2.0.15",
     "react-hook-form": "^7.29.0",
     "react-router-dom": "^6.3.0",
+    "serverless-http": "^3.0.1",
     "yarn": "^1.22.18"
   }
 }
