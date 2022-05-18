@@ -11,8 +11,12 @@ function PharmaManagement(){
     <div className="PMbody">
         <div className="sesh">
             <span>logged in as {username} !!!</span>
-            <button onClick={() => {navigate("/PMSlogin")}}>Logout</button>
+            <button onClick={() => {navigate("/")}}>Logout</button>
         </div>
+         <div className='pagenav'>
+        <a onClick={() => {navigate("/")}}>Dashboard</a> / PharmaManagement
+         
+      </div>
         
         <div className="home-body">
 
@@ -24,8 +28,6 @@ function PharmaManagement(){
 
          <a
         onClick={() => {}}>???</a>
-
-        
 
         
         </div>

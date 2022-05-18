@@ -43,6 +43,7 @@ function PMSlogin(){
     };
 
     const login = (event) => {
+        
         event.preventDefault();
 
         Axios.post("http://localhost:3001/loginPMSuser",{
@@ -62,6 +63,11 @@ function PMSlogin(){
     
 
     return(
+        <div>
+            <div className='pagenav'>
+        <a onClick={() => {navigate("/")}}>Dashboard</a>/PharmaManagement
+         
+        </div>
         <div className="sign-in-body">
             <div className="container" id="container">
                 <div className="form-container sign-up-container">
@@ -91,6 +97,7 @@ function PMSlogin(){
                     </form>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

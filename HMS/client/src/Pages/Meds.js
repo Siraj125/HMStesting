@@ -4,19 +4,26 @@ import {useState, useEffect} from 'react';
 import Axios from "axios";
 import {medsSchema} from '../Validations/MedsValidation';
 import {useNavigate, useParams} from "react-router-dom";
+import SearchBox from './SearchBox';
 
 function PMS(){
     const [listOfPharma, setListOfPharma] = useState([]);
+    const [listOfFilteredPharma, setListOfFilteredPharma] = useState([]);
     const [name,setName] = useState("");
     const [quantity,setQuantity] = useState(0);
     const [scientificName,setScientificName] = useState("");
     const [error,setError] = useState("");
     let navigate = useNavigate();
     let {username} = useParams();
+
     
+    
+
+
     useEffect( ()=> {
       Axios.get("http://localhost:3001/getPharma").then((response)=>{
         setListOfPharma(response.data);
+        setListOfFilteredPharma(response.data);
       });
     }, []);
 
@@ -27,7 +34,7 @@ function PMS(){
           ()=>{
           setListOfPharma(
             listOfPharma.map((pharma) => {
-            return pharma._id == id 
+            return pharma._id === id 
             ? {_id: id, name: pharma.name, scientificName:pharma.scientificName ,quantity: newQuantity} : pharma;
           }))
         })
@@ -70,6 +77,17 @@ function PMS(){
         }
         else setError("Incorrect inputs");
     };
+    const search = (query) => {
+      let filtered = listOfPharma.filter(ap => {
+        if (query === '') {
+          return ap;
+       } else if (ap.name.toLowerCase().includes(query.toLowerCase())) {  
+          return ap;
+       }
+       })
+      setListOfFilteredPharma(filtered);
+      console.log(query);
+    }
 
     return (
       <div>
@@ -77,6 +95,12 @@ function PMS(){
                <span>logged in as {username} !!!</span>
                <button onClick={() => {navigate("/PMSlogin")}}>Logout</button>
            </div>
+      <div className='pagenav'>
+        <a onClick={() => {navigate("/")}}>Dashboard</a>/
+         <a onClick={() => {navigate("/PMSlogin")}}>PharmaManagement</a>/Pharma Inventory
+         
+      </div>
+
         <div className="PmsApp">
             
             <div className="userDisplay">
@@ -106,15 +130,19 @@ function PMS(){
                       setScientificName(event.target.value);
                       }}
                     />
-                    {/* <input type="submit"/> */}
+  
                     <button type="submit">Add Medicine</button>
                     
                   </form>
                   <span className='error-msg'>{error}</span>
                 </div>
+                
+                <div className='ExtraFeatures'>
+                <span>Lookup medicine:</span>
+                <input placeholder='search....' onChange={event => search(event.target.value)} />
+                <button onClick={() => {navigate("/MedSearch/"+username)}}>Advanced Search</button>
 
-
-
+                </div>
 
                 <div className='DBdisplay'>
                    <table className='table'>
@@ -122,7 +150,7 @@ function PMS(){
                       <tr><th>Name</th><th>Quantity</th><th>ScientificName</th><th>Added on</th><th>Expiry date</th><th>Batch ID</th><th></th></tr>
                       </thead>
                       <tbody>
-                        {listOfPharma.map((pharma)=>{
+                        {listOfFilteredPharma.map((pharma)=>{
                           return(  
                               <tr>
                                 <td>{pharma.name}</td>

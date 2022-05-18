@@ -46,6 +46,11 @@ const formatDate = (dateString) => {
                <span>logged in as {username} !!!</span>
                <button onClick={() => {navigate("/PMSlogin")}}>Logout</button>
         </div>
+        <div className='pagenav'>
+        <a onClick={() => {navigate("/")}}>Dashboard</a>/
+         <a onClick={() => {navigate("/PMSlogin")}}>PharmaManagement</a>/Pharma Requests
+         
+      </div>
         <div className="PmsApp">
             
             <div className="userDisplay">

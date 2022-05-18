@@ -1,19 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
+
+
 header {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+#light header {
   background-color:rgb(141, 202, 255);
+}
+#dark header {
+  background-color:rgb(37, 52, 65);
 }
 
 header li, header a, header button {
   font-family: "Montserrat", sans-serif;
   font-size: 500;
   font-size: 16px;
-  color: #000000;
   text-decoration: none;
 }
+
+/* #dark header li, header a, header button  {
+  color: rgb(255, 255, 255);
+} */
+/* #dark .header li, header a, header button  {
+  color: rgb(255, 255, 255);
+}  */
 
 header {
   display: flex;
@@ -24,6 +37,8 @@ header {
 
 .logo{
   cursor:pointer;
+  height: 50px;
+  width: auto;
 }
 
 .nav__links{
@@ -36,12 +51,15 @@ header {
 }
 
 .nav__links li a {
+  color: rgb(0, 0, 0);
   transition: all 0.3s ease 0;
 }
-
-.nav__links li a:hover {
-  color:rgb(42, 156, 255);
+#dark .nav__links li a{
+  color: rgb(255, 255, 255);
 }
+/* .nav__links li a:hover {
+  color:rgb(42, 156, 255);
+} */
 
 .cta button{
   padding: 9px 25px;
@@ -65,18 +83,72 @@ header {
   height: 600px;
 }
 
+#light .home-body {
+  background-color: aliceblue;
+}
+
+#dark .home-body{
+  background-color:rgb(55, 82, 103);
+
+}
+
 
 
 .home-body a {
-  background-color: rgb(140, 201, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 150px;
-  /* margin: 100px; */
   height: 200px;
   width: 200px;
-  
+  border-radius: 10%;
+  color: rgb(0, 0, 0);
+  text-shadow: 1px;
 }
+
+#light .home-body a {
+  background-color:rgb(141, 202, 255);
+  color: rgb(0, 0, 0);
+
+}
+#dark .home-body a {
+  background-color:rgb(37, 52, 65);
+  color: rgb(255, 255, 255);
+
+}
+
 
 .home-body a:hover{
   background-color: rgb(0, 136, 255);
   cursor: pointer;
+  transition:ease-in;
+  transform: scale(105%);
+
+}
+
+.pagenav{
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.pagenav a{
+  cursor: pointer;
+}
+
+#light .pagenav{
+  background-color: aliceblue;
+  color: black;
+}
+#dark .pagenav{
+  background-color: rgb(55, 82, 103);
+  color: white;
+}
+
+.DarkModeSwitch label{
+  border-right: 20px;
+  margin-bottom: 20px;
+}
+
+
+#dark .DarkModeSwitch label{
+  color: white;
 }

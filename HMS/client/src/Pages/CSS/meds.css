@@ -10,13 +10,19 @@ html,body {
     /* justify-content: center; */
     align-items: center;
     /* background-image: url("/Users/siraj/Documents/ITP21/client/src/images/med.jpg"); */
+    
     min-height: 100%;
     min-width: 100%;
     position: fixed;
     background-position: center;
     background-size: cover;
 }
-
+#light .PmsApp{
+  background-color: aliceblue;
+}
+#dark .PmsApp{
+  background-color:rgb(55, 82, 103);
+}
 
 .PmsApp docsDisplay {
   justify-content: center;
@@ -27,7 +33,7 @@ html,body {
   width:100% ;
   border: solid 2px;
   border-collapse: collapse;
-  margin-top: 50px;
+  margin-top: 5px;
   margin-bottom: 50px;
   
 }
@@ -37,19 +43,32 @@ html,body {
   border-color: black;
   padding-left: 30px;
   padding-right: 30px;
-  background-color: #3b79b3;
   color: white;
   margin-left: 60px;
   margin-right: 60px;
   margin-top: 10px;
   margin-bottom: 10px;
-  
+}
+#light table th{
+  background-color: #3b79b3;
+
+}
+#dark table th{
+  background-color: rgb(37, 52, 65);
 }
 .PmsApp table td {
   background-color: aliceblue;
   font-size: 18px;
   border:solid 1px;
   text-align: center ;
+}
+#light  .table td {
+  background-color: aliceblue;
+}
+#dark  .table td {
+  background-color: rgb(56, 73, 88);
+  color: white;
+  border: white;
 }
 
 .PmsApp table button {
@@ -59,13 +78,21 @@ html,body {
       background-color:rgb(142, 202, 255);
       margin: 5px;
   }
+  #light .PmsApp table  button{
+    background-color:rgb(142, 202, 255);
+  
+  
+  }
+  #dark .PmsApp table   button{
+    background-color: rgb(108, 126, 142);
+    color: #cbcbcb;
+  }
 
   .PmsApp table button:hover {
     background-color: #3b79b3;
   }
 
   .inputs {
-    background-color: aliceblue;
     background-position: center;
     background-size: cover;
     padding: 60px;
@@ -73,6 +100,13 @@ html,body {
     border:solid 2px;
   border-color: black;
   }
+  #light  .inputs{
+    background-color: rgb(205, 231, 253);
+  }
+  #dark  .inputs{
+    background-color: rgb(37, 52, 65);
+  }
+
 
   .inputs input{
     margin: 10px;
@@ -81,14 +115,28 @@ html,body {
     height: 20px;
     border: solid;
   }
+  #dark .inputs input::placeholder {
+    background-color: rgb(97, 115, 130);
+    color: white; 
+   }
 
   .inputs button {
     font-size: 15px;
     width: 150px;
     height: 30px;
     margin-left: 20px;
-    background-color:rgb(142, 202, 255);
 }
+#light  .inputs button{
+  background-color:rgb(142, 202, 255);
+
+
+}
+#dark  .inputs button{
+  background-color: rgb(108, 126, 142);
+  color: #cbcbcb;
+}
+
+
 .inputs button:hover {
   background-color: #3b79b3;
 }
@@ -96,11 +144,65 @@ html,body {
 .inputs span{
   font-size: 20px;
 }
+#dark .inputs span{
+  color: white
+}
+
 
 .error-msg {
   color: red;
 }
 
+.ExtraFeatures {
+  display: flex;
+  margin-top: 50px;
+}
+
+.ExtraFeatures {
+  display: flex;
+  margin-top: 50px;
+}
+
+.ExtraFeatures input {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  width: 200px;
+  height: 20px;
+}
+.ExtraFeatures span {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  padding-top: 3px;
+  font-size: 18px;
+}
+#dark .ExtraFeatures span {
+  color: white
+}
+
+
+.ExtraFeatures button{
+  font-size: 15px;
+      width: 150px;
+      /* height: 25px; */
+      background-color:rgb(142, 202, 255);
+      margin-left: 200px;
+}
+#light .ExtraFeatures  button{
+  background-color:rgb(142, 202, 255);
+
+
+}
+#dark .ExtraFeatures  button{
+  color: #cbcbcb;
+  background-color: rgb(108, 126, 142);
+}
+.ExtraFeatures  button:hover {
+  background-color: #3b79b3;
+}
+.DMSwitch {
+  margin-left: 20px;
+}
 /* .sesh {
   box-sizing: border-box;
   background-color: rgb(255, 118, 118);
